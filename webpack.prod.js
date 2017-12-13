@@ -11,7 +11,9 @@ module.exports = merge(common, {
     devtool: 'source-map',
     entry: {
         vendor: [
-            'lodash',
+            'react',
+            'react-dom',
+            // 'react-scripts',
         ],
     },
     module: {
