@@ -15,11 +15,6 @@ module.exports = merge(common, {
                         {
                             loader: 'css-loader',
                             options: {
-                                // root: '.',
-                                // import: false,
-                                // modules: true,
-                                // localIdentName: '[path][name]__[local]--[hash:base64:5]',
-                                // minimize: true,
                                 sourceMap: true,
                             },
                         },
@@ -39,6 +34,7 @@ module.exports = merge(common, {
             },
         ],
     },
+    cache: true,
     devtool: 'inline-source-map',
     devServer: {
         host: '0.0.0.0',
@@ -51,6 +47,9 @@ module.exports = merge(common, {
     plugins: [
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
+        new webpack.DefinePlugin({
+            'process.env.NODE_ENV': JSON.stringify('development'),
+        }),
         new ExtractTextPlugin({
             // filename:  (getPath) => {
             //     return getPath('css/[name].css').replace('css/js', 'css');
@@ -62,13 +61,6 @@ module.exports = merge(common, {
             template: './src/index.html',
             title: 'Development',
             favicon: './src/favicon.png',
-            // minify: {
-            //     collapseBooleanAttributes: true,
-            //     collapseInlineTagWhitespace: true,
-            //     collapseWhitespace: true,
-            //     ignoreCustomComments: true,
-            //     keepClosingSlash: true,
-            // },
         }),
     ],
 });

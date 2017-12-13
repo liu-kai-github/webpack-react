@@ -55,15 +55,15 @@ module.exports = merge(common, {
     },
     plugins: [
         new CleanWebpackPlugin(['dist']),
-        new UglifyJSPlugin({
-            sourceMap: true,
-        }),
         new webpack.DefinePlugin({
             'process.env': {
                 'NODE_ENV': JSON.stringify('production'),
             },
         }),
         new webpack.HashedModuleIdsPlugin(),
+        new UglifyJSPlugin({
+            sourceMap: true,
+        }),
         new webpack.optimize.CommonsChunkPlugin({
             name: 'vendor',
         }),
