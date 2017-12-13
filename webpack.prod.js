@@ -45,7 +45,7 @@ module.exports = merge(common, {
                         loader: 'url-loader',
                         options: {
                             limit: 8192,
-                            outputPath: '/static/img/',
+                            outputPath: '/static/media/',
                             // publicPath: 'http://localhost:8088',
                         },
                     },

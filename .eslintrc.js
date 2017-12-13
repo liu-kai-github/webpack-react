@@ -1,13 +1,23 @@
 module.exports = {
+    'root': true,
     'env': {
         'browser': true,
         'node': true,
         'es6': true,
     },
     'parser': 'babel-eslint',
-    'extends': 'eslint:recommended',
+    'extends': [
+        'eslint:recommended',
+        'plugin:react/recommended',
+    ],
+    'plugins': [
+        'react',
+    ],
     'parserOptions': {
         'sourceType': 'module',
+        'ecmaFeatures': {
+            'jsx': true,
+        }
     },
     'rules': {
         'eqeqeq': ['error', 'always'],
