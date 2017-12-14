@@ -35,7 +35,7 @@ yarn start
 yarn build
 ```
 
-* 代码检查
+* 代码检查（如果无法commit代码，请执行该命令，查看不合格代码）
 
 ```sh
 yarn lint
