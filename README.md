@@ -1,4 +1,4 @@
-# webpack-build-yarn
+# webpack-react
 
 ### 安装环境
 
