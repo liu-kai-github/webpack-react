@@ -20,6 +20,7 @@ module.exports = {
         }
     },
     'rules': {
+        'no-var': 'error',
         'eqeqeq': ['error', 'always'],
         'curly': 'error',
         'quotes': ['error', 'single'],
