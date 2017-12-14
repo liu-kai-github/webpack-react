@@ -21,35 +21,43 @@ module.exports = {
     },
     'rules': {
         // Possible Errors
+        'valid-jsdoc': 'error',
+        'no-console': 'warn',
+        'for-direction': 'error',
+        
         // Best Practices
-        // Variables
-        // Node.js and CommonJS
-        // Stylistic Issues
-        // ECMAScript 6
-        'no-var': 'error',
-        'prefer-arrow-callback': 'error',
-        'prefer-const': 'error',
-        'no-undefined': 'error',
-        'prefer-rest-params': 'error',
         'eqeqeq': ['error', 'always'],
         'curly': 'error',
+        'no-alert': 'error',
+        'no-else-return': 'error',
+        'no-multi-spaces': 'error',
+
+        // Variables
+        'no-undefined': 'error',
+
+        // Node.js and CommonJS
+
+        // Stylistic Issues
         'quotes': ['error', 'single'],
         'indent': ['error', 4],
         'linebreak-style': ['error', 'unix'],
         'semi': ['error', 'always'],
-        'valid-jsdoc': 'error',
-        'no-empty-interface': true,
-        'no-shadowed-variable': true,
-        'no-console': 'warn',
-        'no-alert': 'error',
-        'no-else-return': 'error',
-        'comment-format': [true, 'check-space'],
-        'for-direction': 'error',
         'no-multiple-empty-lines': 'error',
-        'no-duplicate-imports': 'error',
         'block-spacing': ['error', 'never'],
         'jsx-quotes': ['error', 'prefer-double'],
-        'no-multi-spaces': 'error',
+
+        // ECMAScript 6
+        'no-var': 'error',
+        'prefer-arrow-callback': 'error',
+        'prefer-const': 'error',
+        'prefer-rest-params': 'error',
+        'no-duplicate-imports': 'error',
+
+        // 'no-empty-interface': true,
+        // 'no-shadowed-variable': true,
+        // 'comment-format': [true, 'check-space'],
+
+        // React
         'react/no-multi-comp': 'error',
         'react/prefer-es6-class': 'error',
         'react/prefer-stateless-function': 'error',
