@@ -1,15 +1,14 @@
 {
   "name": "webpack-build-yarn",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": "dist/index.html",
   "repository": "git@github.com:liu-kai-github/webpack-build-yarn.git",
   "author": "liu-kai-github <31062816+liu-kai-github@users.noreply.github.com>",
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server --config webpack.dev.js",
     "build": "webpack --config webpack.prod.js",
-    "lint": "eslint ./src/**{js,jsx} ./src/**/**{js,jsx} ./src/**/**/**{js,jsx} ./src/**/**/**/**{js,jsx} ./src/**/**/**/**/**{js,jsx}",
-    "fix": "eslint ./src --fix"
+    "lint": "eslint ./src/**{js,jsx} ./src/**/**{js,jsx} ./src/**/**/**{js,jsx} ./src/**/**/**/**{js,jsx} ./src/**/**/**/**/**{js,jsx}"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
