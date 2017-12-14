@@ -20,14 +20,24 @@ module.exports = {
         }
     },
     'rules': {
+        // Possible Errors
+        // Best Practices
+        // Variables
+        // Node.js and CommonJS
+        // Stylistic Issues
+        // ECMAScript 6
         'no-var': 'error',
+        'prefer-arrow-callback': 'error',
         'prefer-const': 'error',
+        'no-undefined': 'error',
+        'prefer-rest-params': 'error',
         'eqeqeq': ['error', 'always'],
         'curly': 'error',
         'quotes': ['error', 'single'],
         'indent': ['error', 4],
         'linebreak-style': ['error', 'unix'],
         'semi': ['error', 'always'],
+        'valid-jsdoc': 'error',
         'no-empty-interface': true,
         'no-shadowed-variable': true,
         'no-console': 'warn',
