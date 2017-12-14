@@ -5,6 +5,10 @@
 * node.js ```^8.0.0``` [https://nodejs.org](https://nodejs.org)
 * yarn ```^1.0.0```  [https://yarnpkg.com](https://yarnpkg.com)
 
+### 风格指南
+
+* 请严格按照此规范进行开发 [https://github.com/airbnb/javascript/tree/master/react](https://github.com/airbnb/javascript/tree/master/react)
+
 ### 编辑器
 
 * 强烈推荐 **WebStorm**
