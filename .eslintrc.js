@@ -24,7 +24,7 @@ module.exports = {
         'valid-jsdoc': 'error',
         'no-console': 'warn',
         'for-direction': 'error',
-        
+
         // Best Practices
         'eqeqeq': ['error', 'always'],
         'curly': 'error',
