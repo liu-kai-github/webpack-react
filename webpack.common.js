@@ -1,6 +1,8 @@
+const path = require('path');
+
 module.exports = {
     entry: {
-        main: './src/main.jsx',
+        main: path.resolve(__dirname, './src/main.jsx'),
     },
     resolve: {
         extensions: ['.js', '.jsx']
@@ -13,7 +15,5 @@ module.exports = {
             },
         ],
     },
-    plugins: [
-
-    ],
+    plugins: [],
 };

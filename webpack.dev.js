@@ -1,3 +1,4 @@
+const path = require('path');
 const webpack = require('webpack');
 const merge = require('webpack-merge');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -35,7 +36,8 @@ module.exports = merge(common, {
         ],
     },
     cache: true,
-    devtool: 'inline-source-map',
+    // devtool: 'inline-source-map',
+    devtool: 'cheap-module-eval-source-map',
     devServer: {
         host: '0.0.0.0',
         useLocalIp: true,
@@ -45,7 +47,7 @@ module.exports = merge(common, {
         port: 8080,
     },
     plugins: [
-        new webpack.NamedModulesPlugin(),
+        // new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development'),
@@ -58,9 +60,13 @@ module.exports = merge(common, {
             allChunks: true
         }),
         new HtmlWebpackPlugin({
-            template: './src/index.html',
+            template: path.resolve(__dirname, './src/index.html'),
             title: 'Development',
-            favicon: './src/favicon.png',
+            favicon: path.resolve(__dirname, './src/favicon.png'),
+        }),
+        new webpack.optimize.CommonsChunkPlugin({
+            name: 'main',
+            minChunks: Infinity,
         }),
     ],
 });
