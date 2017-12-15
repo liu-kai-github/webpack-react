@@ -7,7 +7,7 @@
 
 ### 风格指南
 
-* 请严格按照此规范进行开发<span style="color: red;">(否则将无法向版本库提交代码)</span> [https://github.com/airbnb/javascript/tree/master/react](https://github.com/airbnb/javascript/tree/master/react)
+* 请严格按照此规范进行开发(否则将无法向版本库提交代码) [https://github.com/airbnb/javascript/tree/master/react](https://github.com/airbnb/javascript/tree/master/react)
 
 ### 编辑器
 
