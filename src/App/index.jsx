@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import logo from './logo.svg';
-import style from './App.css';
+import {app, appLogo, appHeader, appTitle, appIntro} from './App.css';
 
 class App extends Component {
 
@@ -11,12 +11,16 @@ class App extends Component {
 
     render() {
         return (
-            <div className={style.App}>
-                <header className="App-header">
-                    <img src={logo} className="App-logo" alt="logo" />
-                    <h1 className="App-title">Welcome to React</h1>
+            <div className={app}>
+                <header className={appHeader}>
+                    <img
+                        src={logo}
+                        className={appLogo}
+                        alt="logo"
+                    />
+                    <h1 className={appTitle}>Welcome to React</h1>
                 </header>
-                <p className="App-intro">
+                <p className={appIntro}>
                     To get started, edit <code>src/App/index.js</code> and save to reload.
                 </p>
             </div>
