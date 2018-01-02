@@ -10,17 +10,15 @@ module.exports = merge(common, {
         rules: [
             {
                 test: /\.css$/,
-                use: ExtractTextPlugin.extract({
-                    fallback: 'style-loader',
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                sourceMap: true,
-                            },
+                use: [
+                    'style-loader',
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            sourceMap: true,
                         },
-                    ],
-                }),
+                    },
+                ],
             },
             {
                 test: /\.(png|svg|jpg|gif)$/,
@@ -51,13 +49,6 @@ module.exports = merge(common, {
         new webpack.HotModuleReplacementPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development'),
-        }),
-        new ExtractTextPlugin({
-            // filename:  (getPath) => {
-            //     return getPath('css/[name].css').replace('css/js', 'css');
-            // },
-            filename: 'style.[contenthash].css',
-            allChunks: true
         }),
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, './src/index.html'),
