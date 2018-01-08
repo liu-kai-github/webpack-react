@@ -71,5 +71,6 @@ module.exports = {
         'react/self-closing-comp': 'error',
         'react/jsx-no-bind': 'error',
         'react/require-render-return': 'error',
+        "react/prop-types": 0
     },
 };
